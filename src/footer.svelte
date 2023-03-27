@@ -1,0 +1,3 @@
+<footer>
+  Footer: Lorem ipsumit et cetera...
+</footer>
