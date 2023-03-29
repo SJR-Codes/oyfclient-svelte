@@ -1,6 +1,5 @@
 import {baseURL} from "../lib/connect.js";
 import {getInit} from "../lib/connect.js";
-import {goFetch} from "../lib/connect.js";
 
 const photoStore = {
   getAllPhotos: () => {
