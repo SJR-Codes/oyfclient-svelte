@@ -30,7 +30,7 @@ async function doLogin() {
   
   try {
     let res = await goFetch(request);
-    if ( res !== false ) {
+    if (res) {
       sessionStorage.setItem('token', res.access_token);
       user.loggedIn = true;
     }
