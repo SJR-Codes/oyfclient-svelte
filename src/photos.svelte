@@ -3,7 +3,6 @@
   import photoStore from './store/photos.js';
 
   let selCategory = "";
-  let listPhotos;
 
   //$: makes line reactive -> if value changes it reacts
   $: listPhotos = photoStore.getAllPhotos(selCategory);
@@ -30,3 +29,7 @@
       <p style="color: red">Error! {JSON.stringify(error)} </p>
   {/await}
 </div>
+
+<style>
+  .photoList{min-height: 160px;}
+</style>
