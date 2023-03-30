@@ -47,9 +47,9 @@ async function doLogin() {
 <div id="content" class="oyf-content">
 {#if !user.loggedIn }
   <form id="login-form">
-    <input bind:value={username} type="text" name="username" id="username" class="text-input" placeholder="Username" autocomplete="username">
+    <input bind:value={username} type="text" placeholder="Username" autocomplete="username">
     <br><br>
-    <input bind:value={password} type="password" name="password" id="password" class="text-input" placeholder="Password" autocomplete="current-password">
+    <input bind:value={password} type="password" placeholder="Password" autocomplete="current-password">
     <br><br>
     <button class="button" on:click|preventDefault={doLogin}>Login</button>
   </form>
