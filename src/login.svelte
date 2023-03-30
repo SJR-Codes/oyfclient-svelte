@@ -21,6 +21,8 @@ async function doLogin() {
     let err = "Enter username and password, please."
     console.error(err);
     error = err;
+
+    return false;
   }
 
   const queryParams = { username: username, password: password }
