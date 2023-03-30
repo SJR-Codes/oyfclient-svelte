@@ -1,16 +1,10 @@
 import {baseURL} from "../lib/connect.js";
 import {getInit} from "../lib/connect.js";
 
-const photoStore = {
-  getAllPhotos: (category_id) => {
+const categoryStore = {
+  getAllCategories: () => {
     let myInit = getInit();
-    let req = ''
-    if ( category_id !== "" ) {
-      req = "/photosbycat/"  + category_id;
-    }
-    else {
-      req = "/photos/";
-    }
+    let req = "/categories/";
     const request = new Request(baseURL + req, myInit);
     let apicall = fetch(request)
     .then(function(response) {
@@ -24,4 +18,4 @@ const photoStore = {
   }
 };
 
-export default photoStore;
+export default categoryStore;
