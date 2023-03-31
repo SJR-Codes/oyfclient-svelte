@@ -25,6 +25,7 @@
   }
 
 </script>
+
 <div>
   <CategorySelect bind:category={selCategory}/>
 </div>
@@ -33,6 +34,7 @@
       <p>Loading......</p>
   {:then photos}
     {#each photos as { id, thumbnail }}
+      <!-- svelte-ignore a11y-click-events-have-key-events -->
       <img src="{getBaseImg(thumbnail)}" alt="{id} photo" on:click={showPhoto(id)}>
     {/each}
   {:catch error}

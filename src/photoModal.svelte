@@ -36,6 +36,7 @@ $: if (showModal) dialog.showModal();
     {#await photo}
         <p>Loading......</p>
     {:then data}
+      <!-- svelte-ignore a11y-img-redundant-alt -->
       <img src="{getBaseImg(data)}" alt="photo" on:click={() => dialog.close()}>
     {:catch error}
         <p style="color: red">Error! {JSON.stringify(error)} </p>
