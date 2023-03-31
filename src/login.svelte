@@ -1,11 +1,9 @@
 <script>
-import {baseURL} from "../src/lib/connect.js";
-import {getInit} from "../src/lib/connect.js";
-import {goFetch} from "../src/lib/connect.js";
+import { baseURL } from "../src/lib/connect.js";
+import { getInit } from "../src/lib/connect.js";
+import { goFetch } from "../src/lib/connect.js";
+import { loggedIn } from './store/misc.js';
 
-import Photos from './photos.svelte';
-
-let user = { loggedIn: false };
 let username = '';
 let password = '';
 let error = '';
@@ -34,7 +32,7 @@ async function doLogin() {
     let res = await goFetch(request);
     if (res) {
       sessionStorage.setItem('token', res.access_token);
-      user.loggedIn = true;
+      loggedIn.set(true);
     }
   }
   catch (e) {
@@ -45,7 +43,6 @@ async function doLogin() {
 </script>
 
 <div id="content" class="oyf-content">
-{#if !user.loggedIn }
   <form id="login-form">
     <input bind:value={username} type="text" placeholder="Username" autocomplete="username">
     <br><br>
@@ -54,7 +51,4 @@ async function doLogin() {
     <button class="button" on:click|preventDefault={doLogin}>Login</button>
   </form>
   <p hidden={!error} style="color: red">{error}</p>
-{:else}
-  <Photos />
-{/if}
 </div>

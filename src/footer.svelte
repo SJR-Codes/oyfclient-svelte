@@ -2,9 +2,12 @@
   import javascriptLogo from '/javascript.svg'
   import viteLogo from '/vite.svg'
   import svelteLogo from '/svelte.svg'
+  
+  import { loggedIn } from './store/misc.js';
 </script>
 
 <footer>
+{#if !$loggedIn}
   <div><p>made with:</p></div>
   <div>
     <p>
@@ -12,13 +15,16 @@
       <img src="{svelteLogo}" class="logo" alt="Svelte logo" />
     </a>
     <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript" target="_blank" rel="noreferrer">
-      <img src="{javascriptLogo}" class="logo vanilla" alt="JavaScript logo" />
+      <img src="{javascriptLogo}" class="logo" alt="JavaScript logo" />
     </a>
     <a href="https://vitejs.dev/" target="_blank" rel="noreferrer">
       <img src="{viteLogo}" class="logo" alt="Vite logo" />
     </a>
     </p>
   </div>
+{:else}	
+		<p>Logged in...</p>
+{/if}
 </footer>
 
 <style>
