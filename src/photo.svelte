@@ -18,11 +18,12 @@
 </script>
 <div class="photo">
   {#await $photo}
-      <p>Loading......</p>
+    <p>Loading......</p>
   {:then res}
+    <!-- svelte-ignore a11y-img-redundant-alt -->
     <img src="{getBaseImg(res)}" alt="photo">
   {:catch error}
-      <p style="color: red">Error! {JSON.stringify(error)} </p>
+    <p style="color: red">Error! {JSON.stringify(error)} </p>
   {/await}
 </div>
 

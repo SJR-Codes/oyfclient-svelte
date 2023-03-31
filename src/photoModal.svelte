@@ -84,4 +84,5 @@ $: if (showModal) dialog.showModal();
 	button {
 		display: block;
 	}
+	img {max-width: 100%;}
 </style>
