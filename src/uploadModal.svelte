@@ -3,7 +3,7 @@
   let photo;
 
 export let showModal; // boolean
-export let photoId; // str
+let photoId; // str
 
 let dialog; // HTMLDialogElement
 
@@ -32,6 +32,9 @@ $: if (showModal) dialog.showModal();
 	on:close={() => (showModal = false)}
 	on:click|self={() => dialog.close()}
 >
+
+
+
 	<div on:click|stopPropagation>
     {#await photo}
         <p>Loading......</p>
@@ -39,7 +42,7 @@ $: if (showModal) dialog.showModal();
       <!-- svelte-ignore a11y-img-redundant-alt -->
       <img src="{getBaseImg(data)}" alt="photo" on:click={() => dialog.close()}>
     {:catch error}
-        <p style="color: red">Error! {JSON.stringify(error)} </p>
+        <p style="color: red">{error}</p>
     {/await}
 		<!-- svelte-ignore a11y-autofocus -->
 		<button autofocus on:click={() => dialog.close()}>close</button>
@@ -57,7 +60,7 @@ $: if (showModal) dialog.showModal();
 		background: rgba(0, 0, 0, 0.3);
 	}
 	dialog > div {
-		padding: 0;
+		padding: 1em;
 	}
 	dialog[open] {
 		animation: zoom 0.3s cubic-bezier(0.34, 1.56, 0.64, 1);

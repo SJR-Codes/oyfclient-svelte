@@ -1,6 +1,6 @@
 export const baseURL = "http://localhost:8000";
 
-export function getInit(method="GET", accept="application/json", contentType="application/json", withToken=true, data="" ) {
+export function getInit(method="GET", accept="application/json", contentType="application/json", withToken=true, data ) {
     let myInit = {
         method: method,
         mode: "cors",
@@ -16,10 +16,14 @@ export function getInit(method="GET", accept="application/json", contentType="ap
     if ( withToken !== false ) {
         myInit.headers['Authorization'] = "Bearer " + sessionStorage.getItem('token');
     }
-    if ( data !== "" ) {
+    if ( data ) {
+        //console.debug("Formbody: ");
+        //for (var pair of form.entries()) {
+        //    console.log(pair[0]+ ', ' + pair[1]); 
+        //}
         myInit['body'] = data;
     }
-
+    console.debug("Init: " + JSON.stringify(myInit))
     return myInit;
 }
 export async function goFetch(request){

@@ -40,7 +40,7 @@
     </span>
     {/each}
   {:catch error}
-    <p style="color: red">Error! {JSON.stringify(error)} </p>
+    <p style="color: red">{error}</p>
   {/await}
 </div>
 

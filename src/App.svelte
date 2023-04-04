@@ -6,6 +6,7 @@
   import Login from './login.svelte';
   import Photos from './photos.svelte';
   import Footer from './footer.svelte';
+  import Navi from './navi.svelte';
 
 </script>
 
@@ -17,4 +18,8 @@
   <Photos />
 {/if}
 </main>
-<Footer />
+{#if !$loggedIn }
+  <Footer />
+{:else}
+  <Navi />
+{/if}

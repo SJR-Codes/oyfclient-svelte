@@ -23,7 +23,7 @@
     <!-- svelte-ignore a11y-img-redundant-alt -->
     <img src="{getBaseImg(res)}" alt="photo">
   {:catch error}
-    <p style="color: red">Error! {JSON.stringify(error)} </p>
+    <p style="color: red">{error}</p>
   {/await}
 </div>
 

@@ -2,12 +2,10 @@
   import javascriptLogo from '/javascript.svg'
   import viteLogo from '/vite.svg'
   import svelteLogo from '/svelte.svg'
-  
-  import { loggedIn } from './store/misc.js';
+
 </script>
 
 <footer>
-{#if !$loggedIn}
   <div><p>made with:</p></div>
   <div>
     <p>
@@ -22,18 +20,17 @@
     </a>
     </p>
   </div>
-{:else}	
-		<p>Logged in...</p>
-{/if}
 </footer>
 
 <style>
   img {margin: 0 1em 0;}
+  footer {border-top: 1px solid #b0b5b3; margin: 1em; padding: 1em 0}
   .logo {
-      will-change: filter;
-      transition: filter 300ms;
+    will-change: filter;
+    transition: filter 300ms;
+    cursor: pointer;
   }
   .logo:hover {
-      filter: drop-shadow(0 0 2em #646cffaa);
+    filter: drop-shadow(0 0 2em #646cffaa);
   }
 </style>

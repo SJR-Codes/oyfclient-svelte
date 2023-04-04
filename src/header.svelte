@@ -6,13 +6,9 @@
   <a href="https://github.com/SJR-Codes/OwnYourFiles_foto" target="_blank" rel="noreferrer">
     <img src={oyfLogo} class="logo" alt="OYF Logo" />
   </a>
-  <h3>- Svelte client -</h3>
 </header>
 
 <style>
-  h3 {
-    margin-block: 0;
-  }
   .logo {
       will-change: filter;
       transition: filter 300ms;
