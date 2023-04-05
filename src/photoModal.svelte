@@ -49,15 +49,16 @@ $: if (showModal) dialog.showModal();
 <style>
 	dialog {
 		max-width: 100%;
-		border-radius: 0.2em;
-		border: none;
+		border-radius: 0.8em;
+		border: solid #9b9696;
 		padding: 0;
 	}
 	dialog::backdrop {
 		background: rgba(0, 0, 0, 0.3);
 	}
 	dialog > div {
-		padding: 0;
+		padding: 0.2em;
+		background-color: #3a3939;
 	}
 	dialog[open] {
 		animation: zoom 0.3s cubic-bezier(0.34, 1.56, 0.64, 1);
@@ -85,5 +86,8 @@ $: if (showModal) dialog.showModal();
 		display: block;
 	}
 	/* responsify images */
-	img {max-width: 100%;}
+	img {
+		max-width: 100%;
+		border-radius: 0.8em;
+	}
 </style>

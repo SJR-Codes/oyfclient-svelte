@@ -123,7 +123,7 @@
 <style>
   p {margin: 0 1em 0;}
   footer {border-top: 1px solid #b0b5b3; margin: 1em; padding: 1em 0}
-  .fakelink, button {
+  .fakelink {
     border-radius: 4em;
     font-size: 1rem;
     background-color: #b0b5b3;
@@ -131,12 +131,12 @@
     margin: 0 1em 0;
     border: none;
   }
-  .logo, .fakelink {
+  .fakelink {
     will-change: filter;
     transition: filter 300ms;
     cursor: pointer;
   }
-  .logo:hover, .fakelink:hover {
+  .fakelink:hover {
     filter: drop-shadow(0 0 2em #646cffaa);
   }
   .error, .success {border-radius: 1em; margin-top: 1em; padding: 0.5em 1em;}
