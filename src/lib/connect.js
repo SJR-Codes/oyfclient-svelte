@@ -23,7 +23,7 @@ export function getInit(method="GET", accept="application/json", contentType="ap
         //}
         myInit['body'] = data;
     }
-    console.debug("Init: " + JSON.stringify(myInit))
+    //console.debug("Init: " + JSON.stringify(myInit))
     return myInit;
 }
 export async function goFetch(request){
