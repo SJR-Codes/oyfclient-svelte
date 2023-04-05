@@ -3,6 +3,7 @@
   import { getInit } from "../src/lib/connect.js";  
   import { loggedIn } from './store/misc.js';
 
+  import Categories from './categories_setting.svelte';
   import CategorySelect from './categories.svelte';
   let selCategory = "";
 
@@ -115,7 +116,7 @@
       <h3>Settings:</h3>
     </div>
     <div>
-      do settings here...
+      <Categories />
     </div>
   </Modal>
 {/if}
