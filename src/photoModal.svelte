@@ -57,7 +57,7 @@ $: if (showModal) dialog.showModal();
 		background: rgba(0, 0, 0, 0.3);
 	}
 	dialog > div {
-		padding: 0.2em;
+		padding: 0.1em;
 		background-color: #3a3939;
 	}
 	dialog[open] {
