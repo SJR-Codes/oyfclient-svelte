@@ -52,3 +52,7 @@ async function doLogin() {
   </form>
   <p hidden={!error} style="color: red">{error}</p>
 </div>
+
+<style>
+  input {border: solid 1px #2e2d2d; border-radius: 1em; padding: 1em;}
+</style>
