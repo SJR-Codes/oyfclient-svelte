@@ -1,6 +1,4 @@
-import {baseURL} from "../lib/connect.js";
-import {getInit} from "../lib/connect.js";
-import { loggedIn } from '../store/misc.js';
+import {baseURL, goFetch, getInit} from "../lib/connect.js";
 
 const getPhotoStore = {
   getPhoto: (photo_id) => {
@@ -13,19 +11,8 @@ const getPhotoStore = {
       throw new Error(`Error! ID missing.`);
     }
     const request = new Request(baseURL + req, myInit);
-    let apicall = fetch(request)
-    .then(function(response) {
-      if (!response.ok) {
-        //log out if response is unauthorized
-        if (response.status == 401) {
-          loggedIn.set(false);
-        }
-        throw new Error(`HTTP error! status: ${response.status}`);
-      }
-      return response.json();
-    });
 
-    return apicall;
+    return goFetch(request);
   }
 };
 

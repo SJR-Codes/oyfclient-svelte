@@ -1,5 +1,4 @@
-import {baseURL} from "../lib/connect.js";
-import {getInit} from "../lib/connect.js";
+import {baseURL, goFetch, getInit} from "../lib/connect.js";
 
 const photoStore = {
   getAllPhotos: (category_id) => {
@@ -12,15 +11,8 @@ const photoStore = {
       req = "/photos/";
     }
     const request = new Request(baseURL + req, myInit);
-    let apicall = fetch(request)
-    .then(function(response) {
-      if (!response.ok) {
-              throw new Error(`HTTP error! status: ${response.status}`);
-      }
-      return response.json();
-    });
 
-    return apicall;
+    return goFetch(request);
   }
 };
 
