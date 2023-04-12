@@ -44,7 +44,7 @@
     </ul>
     <div>
       <p hidden={!errormsg} style="color: red">{errormsg}</p>
-      <input bind:value={title} type="text" placeholder="New category">
+      <input bind:value={title} type="text" placeholder="Add New Category">
       <br><br>
       <button class="button" on:click|preventDefault={addCategory}>add</button>
     </div>
@@ -56,4 +56,5 @@
 
 <style>
   div{margin-bottom: 1em;}
+  input {border: solid 1px #2e2d2d; border-radius: 1em; padding: 1em; background-color: #b0b5b3;}
 </style>

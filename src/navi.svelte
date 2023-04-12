@@ -123,6 +123,7 @@
 
 <style>
   p {margin: 0 1em 0;}
+  input {border: solid 1px #2e2d2d; border-radius: 1em; padding: 1em; background-color: #b0b5b3;}
   footer {border-top: 1px solid #b0b5b3; margin: 1em; padding: 1em 0}
   .fakelink {
     border-radius: 4em;

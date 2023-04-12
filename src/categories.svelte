@@ -24,4 +24,5 @@
 
 <style>
   div{margin-bottom: 1em;}
+  select {border: solid 1px #2e2d2d; border-radius: 1em; padding: 1em;}
 </style>
